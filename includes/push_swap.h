@@ -6,7 +6,7 @@
 /*   By: mrichard <mrichard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 17:47:06 by mrichard          #+#    #+#             */
-/*   Updated: 2023/02/20 18:38:42 by mrichard         ###   ########.fr       */
+/*   Updated: 2023/02/20 21:05:58 by mrichard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int			stack_size(t_stack *stack);
 //---Check_argv---
 
 int			error_in_args(char **argv);
-int			duplicated(t_stack *stack_a);
+int			duplicated(char **argv);
 
 //---Stacks---
 t_stack		*add_value_to_stack(int argc, char **argv);

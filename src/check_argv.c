@@ -6,7 +6,7 @@
 /*   By: mrichard <mrichard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 17:55:24 by mrichard          #+#    #+#             */
-/*   Updated: 2023/02/20 18:17:15 by mrichard         ###   ########.fr       */
+/*   Updated: 2023/02/20 21:03:07 by mrichard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,17 @@ int	error_in_args(char **argv)
 
 //confirma se nao foram inseridos numeros duplicados
 //retorna 1 se tiver, e 0 se nao tiver
-int	duplicated(t_stack *stack_a)
+int	duplicated(char **argv)
 {
 	int	i;
 	int	j;
 
 	i = -1;
-	while (++i < stack_a->size)
+	while (argv[i])
 	{
 		j = i;
-		while (++j < stack_a->size)
-			if (stack_a->values[i] == stack_a->values[j])
+		while (argv[j])
+			if (j != i && )
 				return (1);
 	}
 	return (0);
