@@ -6,7 +6,7 @@
 #    By: mrichard <mrichard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/13 16:00:34 by mrichard          #+#    #+#              #
-#    Updated: 2023/02/20 19:21:00 by mrichard         ###   ########.fr        #
+#    Updated: 2023/02/22 16:38:03 by mrichard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,7 @@ RM = rm -rf
 NAME = push_swap
 LIBFT = ./libft/libft.a
 
-SRCS = src/push_swap.c src/utils.c src/check_argv.c src/instructions_a.c src/instructions_b.c\
-		src/tiny_sort.c src/starting.c src/stacks.c
+SRCS = src/push_swap.c src/utils.c src/check_argv.c src/stacks.c src/starting.c
 
 OBJS = ${SRCS:.c=.o}
 

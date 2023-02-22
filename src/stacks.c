@@ -6,7 +6,7 @@
 /*   By: mrichard <mrichard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 18:16:50 by mrichard          #+#    #+#             */
-/*   Updated: 2023/02/20 21:04:28 by mrichard         ###   ########.fr       */
+/*   Updated: 2023/02/22 16:24:38 by mrichard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,16 @@ t_stack	*stack_new(int value)
 	return (new);
 }
 
-t_stack	get_bottom(t_stack *stack)
+t_stack	*get_bottom(t_stack *stack)
 {
 	while (stack && stack->next != NULL)
-		stack = stack->new;
+		stack = stack->next;
 	return (stack);
 }
 
 void	add_bottom(t_stack **stack, t_stack *new)
 {
 	t_stack	*tail;
-	t_stack	*last;
 
 	if (!new)
 		return ;
@@ -52,7 +51,7 @@ void	add_bottom(t_stack **stack, t_stack *new)
 	tail->next = new;
 }
 
-t_stack	*add_value_to_stack(int argc, char **argv)
+t_stack	*add_value_to_stack(char **argv)
 {
 	t_stack *stack_a;
 	int	n;
@@ -66,7 +65,7 @@ t_stack	*add_value_to_stack(int argc, char **argv)
 		n = ft_atoi(argv[i]);
 		if (n < INT_MIN || n > INT_MAX)
 			exit_error(stack_a, NULL);
-		stack_add_bottom(&stack_a, stack_new(n));
+		add_bottom(&stack_a, stack_new(n));
 	}
 	return (stack_a);
 }
