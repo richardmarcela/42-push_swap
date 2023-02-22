@@ -3,19 +3,20 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mrichard <mrichard@student.42.fr>          +#+  +:+       +#+         #
+#    By: marcela <marcela@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/13 16:00:34 by mrichard          #+#    #+#              #
-#    Updated: 2023/02/22 16:38:03 by mrichard         ###   ########.fr        #
+#    Updated: 2023/02/22 21:20:56 by marcela          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = cc -Wall -Wextra -Werror -I./includes
+CC = cc -Wall -Wextra -Werror -I include
 RM = rm -rf
 NAME = push_swap
 LIBFT = ./libft/libft.a
 
-SRCS = src/push_swap.c src/utils.c src/check_argv.c src/stacks.c src/starting.c
+SRCS = src/push_swap.c src/utils.c src/check_argv.c src/stacks.c src/starting.c\
+		src/tiny_sort.c src/position.c
 
 OBJS = ${SRCS:.c=.o}
 

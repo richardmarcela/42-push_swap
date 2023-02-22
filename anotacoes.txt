@@ -1,2 +1,1 @@
 src/instructions_a.c src/instructions_b.c\
-src/tiny_sort.c 

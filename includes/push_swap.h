@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrichard <mrichard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcela <marcela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 17:47:06 by mrichard          #+#    #+#             */
-/*   Updated: 2023/02/22 16:43:24 by mrichard         ###   ########.fr       */
+/*   Updated: 2023/02/22 21:27:51 by marcela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 # include "../libft/libft.h"
 # include <stddef.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <limits.h>
-# include <stdio.h>
 
 typedef struct s_stack
 {
@@ -37,10 +33,11 @@ void		exit_error(t_stack *stack_a, t_stack *stack_b);
 int			get_size(t_stack *stack);
 void    	free_stack(t_stack **stack);
 int			stack_size(t_stack *stack);
+int			is_sorted(t_stack *stack);
 
 //---Check_argv---
 
-int			error_in_args(char **argv);
+int			error_in_args(int argc, char **argv);
 int			duplicated(char **argv);
 
 //---Stacks---.
@@ -53,4 +50,15 @@ t_stack		*get_bottom(t_stack *stack);
 //---Starting---
 
 void	create_index(t_stack *stack_a, int stack_size);
+void	check_sort(t_stack **stack_a, t_stack **stack_b, int size);
+
+//--Tiny_sort---
+
+void    tiny_three(t_stack **stack_a);
+int highest_value_position(t_stack **stack);
+
+//---Position---
+
+void    get_position(t_stack **stack);
+
 #endif

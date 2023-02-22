@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   starting.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrichard <mrichard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcela <marcela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 16:37:33 by mrichard          #+#    #+#             */
-/*   Updated: 2023/02/22 16:58:51 by mrichard         ###   ########.fr       */
+/*   Updated: 2023/02/22 21:26:29 by marcela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 void	create_index(t_stack *stack_a, int stack_size)
 {
@@ -39,11 +39,11 @@ void	create_index(t_stack *stack_a, int stack_size)
 		if (highest)
 			highest->index = stack_size;
 	}
-	/* printf("INDEX DE 1: %d\n", stack_a->index);
-	printf("INDEX DE 2: %d\n", stack_a->next->index);
-	printf("INDEX DE 3: %d\n", stack_a->next->next->index);
-	printf("INDEX DE 4: %d\n", stack_a->next->next->next->index);
-	printf("INDEX DE 5: %d\n", stack_a->next->next->next->next->index);
-	printf("INDEX DE 6: %d\n", stack_a->next->next->next->next->next->index);
-	printf("INDEX DE 7: %d\n", stack_a->next->next->next->next->next->next->index); */
+}
+
+void	check_sort(t_stack **stack_a, t_stack **stack_b, int size)
+{
+	(void)stack_b;
+	if (size == 3)
+		tiny_three(stack_a);
 }

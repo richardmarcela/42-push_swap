@@ -10,25 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 //confirma se so foram inseridos numeros
-int	error_in_args(char **argv)
+int	error_in_args(int argc, char **argv)
 {
 	int	i;
 	int	j;
 
-	i = 1;
-	j = 0;
-	while (argv[++i])
+	i = 0;
+	while (++i < argc)
 	{
-		while (argv[i][j])
+		if (argv[i][0] == '-')
+			j = 0;
+		else
+			j = -1;
+		while (argv[i][++j])
 		{
-			if (argv[i][j] == '+' || argv[i][j] == '-')
-				j++;
 			if (!ft_isdigit(argv[i][j]))
 				return (1);
-			j++;
 		}
 	}
 	return (0);

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 t_stack	*stack_new(int value)
 {
@@ -75,6 +75,8 @@ int	stack_size(t_stack *stack)
 	int	i;
 
 	i = 0;
+	if (!stack)
+		return (0);
 	while (stack)
 	{
 		stack = stack->next;
