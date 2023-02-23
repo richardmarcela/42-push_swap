@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stacks.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrichard <mrichard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcela <marcela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 18:16:50 by mrichard          #+#    #+#             */
-/*   Updated: 2023/02/22 16:24:38 by mrichard         ###   ########.fr       */
+/*   Updated: 2023/02/23 18:03:25 by marcela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,14 @@ t_stack	*stack_new(int value)
 
 t_stack	*get_bottom(t_stack *stack)
 {
-	while (stack && stack->next != NULL)
+	while (stack && stack->next)
+		stack = stack->next;
+	return (stack);
+}
+
+t_stack	*get_before_bottom(t_stack *stack)
+{
+	while (stack && stack->next && stack->next->next)
 		stack = stack->next;
 	return (stack);
 }
@@ -51,7 +58,7 @@ void	add_bottom(t_stack **stack, t_stack *new)
 	tail->next = new;
 }
 
-t_stack	*add_value_to_stack(char **argv)
+t_stack	*add_value_to_stack(int argc, char **argv)
 {
 	t_stack *stack_a;
 	int	n;
@@ -59,13 +66,16 @@ t_stack	*add_value_to_stack(char **argv)
 
 	stack_a = NULL;
 	n = 0;
-	i = 0;
-	while (argv[++i])
+	i = -1;
+	while (++i < argc)
 	{
 		n = ft_atoi(argv[i]);
 		if (n < INT_MIN || n > INT_MAX)
-			exit_error(stack_a, NULL);
-		add_bottom(&stack_a, stack_new(n));
+			exit_error(&stack_a, NULL);
+		if (i == 1)
+			stack_a = stack_new((int)n);
+		else
+			add_bottom(&stack_a, stack_new(n));
 	}
 	return (stack_a);
 }

@@ -6,7 +6,7 @@
 /*   By: marcela <marcela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 16:37:33 by mrichard          #+#    #+#             */
-/*   Updated: 2023/02/22 21:26:29 by marcela          ###   ########.fr       */
+/*   Updated: 2023/02/23 18:00:01 by marcela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	create_index(t_stack *stack_a, int stack_size)
 	t_stack	*highest;
 	int		value;
 
-	while (--stack_size)
+	while (--stack_size > 0)
 	{
 		ptr = stack_a;
 		value = INT_MIN;
@@ -43,7 +43,10 @@ void	create_index(t_stack *stack_a, int stack_size)
 
 void	check_sort(t_stack **stack_a, t_stack **stack_b, int size)
 {
-	(void)stack_b;
+	if (size == 2 && !is_sorted(*stack_a))
+		sa(*stack_a);
 	if (size == 3)
 		tiny_three(stack_a);
+	else if (size > 3 && !is_sorted(*stack_a))
+		sort(stack_a, stack_b);
 }
