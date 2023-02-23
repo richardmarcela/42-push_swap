@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   check_argv.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrichard <mrichard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcela <marcela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 17:55:24 by mrichard          #+#    #+#             */
-/*   Updated: 2023/02/22 16:31:34 by mrichard         ###   ########.fr       */
+/*   Updated: 2023/02/23 19:11:52 by marcela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-//confirma se so foram inseridos numeros
 int	error_in_args(int argc, char **argv)
 {
 	int	i;
@@ -54,8 +53,6 @@ int	nbr_cmp(char *s1, char *s2)
 	return (s1[i] - s2[j]);
 }
 
-//confirma se nao foram inseridos numeros duplicados
-//retorna 1 se tiver, e 0 se nao tiver
 int	duplicated(char **argv)
 {
 	int	i;
