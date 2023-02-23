@@ -6,7 +6,7 @@
 /*   By: marcela <marcela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 21:20:59 by marcela           #+#    #+#             */
-/*   Updated: 2023/02/23 16:16:48 by marcela          ###   ########.fr       */
+/*   Updated: 2023/02/23 19:47:22 by marcela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,4 @@ void    get_target_position(t_stack **stack_a, t_stack **stack_b)
 		temp_b->target_pos = target_pos;
 		temp_b = temp_b->next;
 	}
-	/* printf("TARGET POSITION 0: %d\n", temp_b->target_pos);
-	printf("TARGET POSITION 1: %d\n", temp_b->next->target_pos);
-	printf("TARGET POSITION 2: %d\n", temp_b->next->next->target_pos); */
 }

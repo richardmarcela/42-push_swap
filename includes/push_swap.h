@@ -6,7 +6,7 @@
 /*   By: marcela <marcela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 17:47:06 by mrichard          #+#    #+#             */
-/*   Updated: 2023/02/23 19:23:37 by marcela          ###   ########.fr       */
+/*   Updated: 2023/02/23 19:34:05 by marcela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,14 @@
 # include "../libft/libft.h"
 # include <stddef.h>
 
-/*Represents each element inserted in argv.
-* Value -> the number itself that came from argv.
-* Index -> value added to each element in the stack that starts from the biggest to the lowest.
-* Pos -> as a index of arraylist, starts from 0 to the first element and increments until it exists.
-* Target_pos -> position that an element need to be placed in order to be in the right place.
-* Cost_a -> represents the cost of getting to the right position in stack A.
-* Cost_b -> represents the cost of getting the element to the top of the B stack.
+/*
+* Represents each element inserted in argv.	
+* Value -> the number itself that came from argv.	 
+* Index -> value added to each element in the stack that starts from the biggest to the lowest.	 
+* Pos -> as an index of ArrayList, starts from 0 to the first element and increments until it exists.	 
+* Target_pos -> position that an element needs to be placed to be in the right place.	 
+* Cost_a -> represents the cost of getting to the right position in stack A.	 
+* Cost_b -> represents the cost of getting the element to the top of the B stack.	 
 * Next -> pointer to the next element.
 */
 typedef struct s_stack
@@ -148,8 +149,10 @@ void		rrr(t_stack **stack_a, t_stack **stack_b);
 
 //Calculates the cost of moving each element of stack B into the correct position in stack A.
 void		get_cost(t_stack **stack_a, t_stack **stack_b);
-//Finds the element in stack B with the cheapest cost to move to stack A 
-//and moves it to the correct position in stack A.
+/*
+* Finds the element in stack B with the cheapest cost to move to stack A 
+* and moves it to the correct position in stack A.
+*/
 void		do_cheapest_move(t_stack **stack_a, t_stack **stack_b);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: marcela <marcela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 18:16:50 by mrichard          #+#    #+#             */
-/*   Updated: 2023/02/23 18:03:25 by marcela          ###   ########.fr       */
+/*   Updated: 2023/02/23 19:51:58 by marcela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_stack	*stack_new(int value)
 {
 	t_stack	*new;
 	
-	new = malloc(sizeof *new);
+	new = malloc(sizeof * new);
 	if (!new)
 		return (NULL);
 	new->value = value;
@@ -66,7 +66,7 @@ t_stack	*add_value_to_stack(int argc, char **argv)
 
 	stack_a = NULL;
 	n = 0;
-	i = -1;
+	i = 0;
 	while (++i < argc)
 	{
 		n = ft_atoi(argv[i]);

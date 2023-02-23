@@ -6,7 +6,7 @@
 /*   By: marcela <marcela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 15:54:35 by marcela           #+#    #+#             */
-/*   Updated: 2023/02/23 18:08:17 by marcela          ###   ########.fr       */
+/*   Updated: 2023/02/23 19:50:46 by marcela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	push_to_b(t_stack **stack_a, t_stack **stack_b)
 	size = stack_size(*stack_a);
 	pushed = 0;
 	i = 0;
-	while (i < size && size > 6 && pushed < (size / 2))
+	while (size > 6 && i < size && pushed < (size / 2))
 	{
 		if ((*stack_a)->index <= (size / 2))
 		{
