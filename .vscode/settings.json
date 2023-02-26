@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "limits.h": "c",
-        "push_swap.h": "c"
-    },
-    "C_Cpp.errorSquiggles": "enabled"
-}
