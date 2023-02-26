@@ -6,11 +6,11 @@
 /*   By: marcela <marcela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 18:05:43 by mrichard          #+#    #+#             */
-/*   Updated: 2023/02/26 18:37:39 by marcela          ###   ########.fr       */
+/*   Updated: 2023/02/26 21:52:32 by marcela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 int	stack_size(t_stack *stack)
 {

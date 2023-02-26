@@ -6,11 +6,11 @@
 /*   By: marcela <marcela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 16:35:12 by marcela           #+#    #+#             */
-/*   Updated: 2023/02/26 18:31:10 by marcela          ###   ########.fr       */
+/*   Updated: 2023/02/26 21:51:42 by marcela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 void	get_cost(t_stack **stack_a, t_stack **stack_b)
 {

@@ -6,11 +6,11 @@
 /*   By: marcela <marcela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 16:37:33 by mrichard          #+#    #+#             */
-/*   Updated: 2023/02/26 18:31:38 by marcela          ###   ########.fr       */
+/*   Updated: 2023/02/26 21:52:32 by marcela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 void	create_index(t_stack *stack_a, int stack_size)
 {

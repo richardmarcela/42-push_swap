@@ -6,11 +6,11 @@
 /*   By: marcela <marcela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 15:54:35 by marcela           #+#    #+#             */
-/*   Updated: 2023/02/26 18:38:10 by marcela          ###   ########.fr       */
+/*   Updated: 2023/02/26 21:52:32 by marcela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 void	push_to_b(t_stack **stack_a, t_stack **stack_b)
 {

@@ -6,11 +6,11 @@
 /*   By: marcela <marcela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 21:20:59 by marcela           #+#    #+#             */
-/*   Updated: 2023/02/26 18:30:22 by marcela          ###   ########.fr       */
+/*   Updated: 2023/02/26 21:52:32 by marcela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 int	lowest_value_position(t_stack **stack)
 {
