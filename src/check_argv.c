@@ -6,7 +6,7 @@
 /*   By: marcela <marcela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 17:55:24 by mrichard          #+#    #+#             */
-/*   Updated: 2023/02/23 19:11:52 by marcela          ###   ########.fr       */
+/*   Updated: 2023/02/26 18:37:20 by marcela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,21 @@ int	error_in_args(int argc, char **argv)
 
 int	nbr_cmp(char *s1, char *s2)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = i;
 	if (s1[i] == '+')
-		i++;
+	{
+		if (s2[j] != '+')
+			i++;
+	}
 	else
+	{
 		if (s2[j] == '+')
 			j++;
+	}
 	while (s1[i] && s2[j] && s1[i] == s2[j])
 	{
 		i++;
@@ -58,10 +63,10 @@ int	duplicated(char **argv)
 	int	i;
 	int	j;
 
-	i = -1;
+	i = 0;
 	while (argv[++i])
 	{
-		j = i - 1;
+		j = 1;
 		while (argv[++j])
 			if (j != i && !nbr_cmp(argv[i], argv[j]))
 				return (1);

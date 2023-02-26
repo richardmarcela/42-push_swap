@@ -6,7 +6,7 @@
 /*   By: marcela <marcela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 15:54:35 by marcela           #+#    #+#             */
-/*   Updated: 2023/02/23 19:50:46 by marcela          ###   ########.fr       */
+/*   Updated: 2023/02/26 18:38:10 by marcela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,16 @@ void	push_to_b(t_stack **stack_a, t_stack **stack_b)
 	{
 		if ((*stack_a)->index <= (size / 2))
 		{
-			pb(stack_a, stack_b);
+			pb(stack_a, stack_b, 1);
 			pushed++;
 		}
 		else
-			ra(stack_a);
+			ra(stack_a, 1);
 		i++;
 	}
 	while (size - pushed > 3)
 	{
-		pb(stack_a, stack_b);
+		pb(stack_a, stack_b, 1);
 		pushed++;
 	}
 }
@@ -50,7 +50,7 @@ void	do_last_shuffle(t_stack **stack_a)
 	{
 		while (lowest_pos < size)
 		{
-			rra(stack_a);
+			rra(stack_a, 1);
 			lowest_pos++;
 		}
 	}
@@ -58,13 +58,13 @@ void	do_last_shuffle(t_stack **stack_a)
 	{
 		while (lowest_pos > 0)
 		{
-			ra(stack_a);
+			ra(stack_a, 1);
 			lowest_pos--;
 		}
 	}
 }
 
-void    sort(t_stack **stack_a, t_stack **stack_b)
+void	sort(t_stack **stack_a, t_stack **stack_b)
 {
 	push_to_b(stack_a, stack_b);
 	tiny_three(stack_a);

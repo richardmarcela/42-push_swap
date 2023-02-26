@@ -6,7 +6,7 @@
 /*   By: marcela <marcela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 21:20:59 by marcela           #+#    #+#             */
-/*   Updated: 2023/02/23 19:47:22 by marcela          ###   ########.fr       */
+/*   Updated: 2023/02/26 18:30:22 by marcela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	lowest_value_position(t_stack **stack)
 	temp = *stack;
 	lowest_index = INT_MAX;
 	get_position(stack);
+	lowest_pos = temp->pos;
 	while (temp)
 	{
 		if (temp->index < lowest_index)
@@ -33,10 +34,10 @@ int	lowest_value_position(t_stack **stack)
 	return (lowest_pos);
 }
 
-void    get_position(t_stack **stack)
+void	get_position(t_stack **stack)
 {
-	t_stack *temp;
-	int     i;
+	t_stack	*temp;
+	int		i;
 
 	temp = *stack;
 	i = 0;
@@ -48,10 +49,10 @@ void    get_position(t_stack **stack)
 	}
 }
 
-int get_target(t_stack **stack_a, int b_index, int target_index, int target_pos)
+int	get_target(t_stack **stack_a, int b_index, int target_index, int target_pos)
 {
 	t_stack	*temp_a;
-	
+
 	temp_a = *stack_a;
 	while (temp_a)
 	{
@@ -77,11 +78,11 @@ int get_target(t_stack **stack_a, int b_index, int target_index, int target_pos)
 	return (target_pos);
 }
 
-void    get_target_position(t_stack **stack_a, t_stack **stack_b)
+void	get_target_position(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack *temp_b;
-	int     target_pos;
-	
+	t_stack	*temp_b;
+	int		target_pos;
+
 	temp_b = *stack_b;
 	get_position(stack_a);
 	get_position(stack_b);

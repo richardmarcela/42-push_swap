@@ -6,13 +6,28 @@
 /*   By: marcela <marcela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 18:05:43 by mrichard          #+#    #+#             */
-/*   Updated: 2023/02/23 18:04:13 by marcela          ###   ########.fr       */
+/*   Updated: 2023/02/26 18:37:39 by marcela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void    free_stack(t_stack **stack)
+int	stack_size(t_stack *stack)
+{
+	int	i;
+
+	i = 0;
+	if (!stack)
+		return (0);
+	while (stack)
+	{
+		stack = stack->next;
+		i++;
+	}
+	return (i);
+}
+
+void	free_stack(t_stack **stack)
 {
 	t_stack	*temp;
 

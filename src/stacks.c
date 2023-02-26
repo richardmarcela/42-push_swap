@@ -6,7 +6,7 @@
 /*   By: marcela <marcela@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 18:16:50 by mrichard          #+#    #+#             */
-/*   Updated: 2023/02/23 19:51:58 by marcela          ###   ########.fr       */
+/*   Updated: 2023/02/26 18:32:55 by marcela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 t_stack	*stack_new(int value)
 {
 	t_stack	*new;
-	
+
 	new = malloc(sizeof * new);
 	if (!new)
 		return (NULL);
 	new->value = value;
-	new->index = 0; //pq comeca em 1
-	new->pos = -1; //pq comeca em 0
+	new->index = 0;
+	new->pos = -1;
 	new->target_pos = -1;
 	new->cost_a = -1;
 	new->cost_b = -1;
@@ -60,9 +60,9 @@ void	add_bottom(t_stack **stack, t_stack *new)
 
 t_stack	*add_value_to_stack(int argc, char **argv)
 {
-	t_stack *stack_a;
-	int	n;
-	int	i;
+	t_stack	*stack_a;
+	int		n;
+	int		i;
 
 	stack_a = NULL;
 	n = 0;
@@ -78,19 +78,4 @@ t_stack	*add_value_to_stack(int argc, char **argv)
 			add_bottom(&stack_a, stack_new(n));
 	}
 	return (stack_a);
-}
-
-int	stack_size(t_stack *stack)
-{
-	int	i;
-
-	i = 0;
-	if (!stack)
-		return (0);
-	while (stack)
-	{
-		stack = stack->next;
-		i++;
-	}
-	return (i);
 }
